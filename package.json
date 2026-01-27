@@ -1,0 +1,29 @@
+{
+  "name": "a11y-evidence-engine",
+  "version": "0.1.0",
+  "description": "Headless accessibility evidence engine with prov-spec provenance",
+  "main": "src/cli.js",
+  "bin": {
+    "a11y-engine": "./bin/a11y-engine.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "scan": "node bin/a11y-engine.js scan"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "provenance",
+    "prov-spec"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "htmlparser2": "^9.1.0"
+  },
+  "devDependencies": {}
+}
