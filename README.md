@@ -1,3 +1,8 @@
+> ⚠️ **This repository has moved to [accessibility-suite](https://github.com/mcp-tool-shop/accessibility-suite)**
+> Source now lives at: `src/a11y-evidence-engine/`
+
+---
+
 # a11y-evidence-engine
 
 Headless accessibility evidence engine that emits [prov-spec](https://github.com/mcp-tool-shop/prov-spec) provenance records.
