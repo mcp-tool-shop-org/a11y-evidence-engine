@@ -1,11 +1,9 @@
-> ⚠️ **This repository has moved to [accessibility-suite](https://github.com/mcp-tool-shop/accessibility-suite)**
-> Source now lives at: `src/a11y-evidence-engine/`
-
----
-
 # a11y-evidence-engine
 
-Headless accessibility evidence engine that emits [prov-spec](https://github.com/mcp-tool-shop/prov-spec) provenance records.
+[![CI](https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+Headless accessibility evidence engine that emits [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) provenance records.
 
 Designed to pair with **a11y-assist**: this engine finds issues and captures verifiable evidence; a11y-assist turns those findings into fixes.
 
