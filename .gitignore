@@ -5,3 +5,6 @@ test-output-vectors/
 demo-out/
 *.log
 .DS_Store
+site/.astro/
+site/node_modules/
+site/dist/
