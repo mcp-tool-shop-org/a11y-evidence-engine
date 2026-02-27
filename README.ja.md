@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
+  <a href="README.md">English</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
 </p>
 
 <p align="center">
@@ -9,21 +9,22 @@
 <p align="center">
   <a href="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.npmjs.com/package/@mcptoolshop/a11y-evidence-engine"><img src="https://img.shields.io/npm/v/@mcptoolshop/a11y-evidence-engine" alt="npm"></a>
+  <a href="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine"><img src="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine/branch/main/graph/badge.svg" alt="Coverage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License"></a>
   <a href="https://mcp-tool-shop-org.github.io/a11y-evidence-engine/"><img src="https://img.shields.io/badge/Landing_Page-live-blue" alt="Landing Page"></a>
 </p>
 
 **ヘッドレスアクセシビリティ検証エンジン。 [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) に準拠したトレーサビリティ情報を出力します。**
 
-**a11y-assist** と連携するように設計されています。このエンジンは問題点を検出し、検証可能な証拠を収集し、a11y-assist はそれらの結果を修正に変換します。
+**a11y-assist** と連携するように設計されています。このエンジンは問題点を検出し、検証可能な証拠を収集し、a11y-assist がそれらの結果を修正に変換します。
 
 ---
 
 ## 機能
 
 - **決定論的な出力:** 同じ入力に対して常に同じ結果（問題点とトレーサビリティ情報）を出力します。
-- **prov-spec 準拠:** すべての問題点には、暗号学的に検証可能な証拠が含まれています。
-- **CI 環境に最適:** 自動化のために設計された終了コードを提供します。
+- **prov-spec 準拠:** すべての問題点には、暗号的に検証可能な証拠が含まれています。
+- **CI 環境に優しい:** 自動化のために設計された終了コードを提供します。
 - **ブラウザ不要:** 静的な HTML ファイルのみを解析します。
 
 ---
@@ -64,34 +65,34 @@ results/
 
 ## 終了コード
 
-| Code | 意味 |
-| ------ | --------- |
-| 0 | `error` 以上の重大度を持つ問題点が見つからなかった |
-| 2 | 少なくとも 1 つの `error` の重大度を持つ問題点が見つかった |
-| 3 | エンジンの内部エラーまたは無効な入力 |
+| コード | 意味 |
+|------|---------|
+| 0 | `error` 深刻度を持つ問題点が見つかりませんでした。 |
+| 2 | 少なくとも 1 つの `error` 深刻度の問題点が見つかりました。 |
+| 3 | 内部エンジンエラー / 無効な入力 |
 
 ---
 
 ## ルール (v0.1.0)
 
 | ルール ID | 説明 |
-| --------- | ------------- |
-| `html.document.missing_lang` | `<html>` 要素に `lang` 属性が設定されていない |
-| `html.img.missing_alt` | `<img>` 要素に `alt` 属性が設定されていない |
-| `html.form_control.missing_label` | フォームコントロールに関連するラベルが設定されていない |
-| `html.interactive.missing_name` | インタラクティブな要素にアクセシブルな名前が設定されていない |
+|---------|-------------|
+| `html.document.missing_lang` | `<html>` 要素に `lang` 属性がありません。 |
+| `html.img.missing_alt` | `<img>` 要素に `alt` 属性がありません。 |
+| `html.form_control.missing_label` | フォームコントロールに関連するラベルがありません。 |
+| `html.interactive.missing_name` | インタラクティブな要素にアクセシブルな名前がありません。 |
 
 ---
 
 ## トレーサビリティ
 
-各問題点には、prov-spec に準拠した 3 つのレコードが含まれています。
+各問題点には、以下の 3 つの prov-spec レコードが含まれています。
 
 1. **record.json**: `engine.extract.evidence.json_pointer` を使用して証拠を抽出します。
 2. **digest.json**: `integrity.digest.sha256` を使用して、正規化された証拠の SHA-256 ハッシュ値を計算します。
 3. **envelope.json**: `adapter.wrap.envelope_v0_1` を使用して結果をラップします。
 
-これらのレコードは、エンジンを信頼しなくても、個別に検証することができます。
+これらのレコードは、エンジンを信頼しなくても、個別に検証できます。
 
 ---
 
@@ -104,6 +105,14 @@ results/
 
 ---
 
+## セキュリティとデータ範囲
+
+**アクセスするデータ:** コマンドライン引数として渡された HTML ファイル（読み取り専用）、`--out` ディレクトリに書き込まれる問題点とトレーサビリティ情報。 **アクセスしないデータ:** 指定された引数と出力ディレクトリ以外のファイル、OS の認証情報、ブラウザのデータ。 **ネットワークへのアクセスはありません:** すべてのスキャンはローカルで行われます。 **テレメトリは収集または送信されません。**
+
 ## ライセンス
 
 [MIT](LICENSE)
+
+---
+
+<a href="https://mcp-tool-shop.github.io/">MCP Tool Shop</a> が作成しました。

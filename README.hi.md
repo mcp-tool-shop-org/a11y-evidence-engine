@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
+  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.md">English</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
 </p>
 
 <p align="center">
@@ -9,11 +9,12 @@
 <p align="center">
   <a href="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.npmjs.com/package/@mcptoolshop/a11y-evidence-engine"><img src="https://img.shields.io/npm/v/@mcptoolshop/a11y-evidence-engine" alt="npm"></a>
+  <a href="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine"><img src="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine/branch/main/graph/badge.svg" alt="Coverage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License"></a>
   <a href="https://mcp-tool-shop-org.github.io/a11y-evidence-engine/"><img src="https://img.shields.io/badge/Landing_Page-live-blue" alt="Landing Page"></a>
 </p>
 
-**एक "हेडलेस" एक्सेसिबिलिटी जांच इंजन जो [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) प्रमाण रिकॉर्ड उत्पन्न करता है।**
+**एक हेडलेस एक्सेसिबिलिटी (पहुंच क्षमता) जांच इंजन जो [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) प्रमाण रिकॉर्ड उत्पन्न करता है।**
 
 यह इंजन **a11y-assist** के साथ काम करने के लिए डिज़ाइन किया गया है: यह इंजन समस्याओं का पता लगाता है और सत्यापन योग्य प्रमाण एकत्र करता है; a11y-assist उन निष्कर्षों को समाधानों में बदल देता है।
 
@@ -64,10 +65,10 @@ results/
 
 ## एग्जिट कोड
 
-| Code | अर्थ |
-| ------ | --------- |
-| 0 | कोई भी गंभीर त्रुटि नहीं मिली। |
-| 2 | कम से कम एक गंभीर त्रुटि मिली। |
+| कोड | अर्थ |
+|------|---------|
+| 0 | `error` गंभीरता वाली कोई भी समस्या नहीं मिली। |
+| 2 | कम से कम एक `error` समस्या मिली। |
 | 3 | इंजन में आंतरिक त्रुटि / अमान्य इनपुट। |
 
 ---
@@ -75,7 +76,7 @@ results/
 ## नियम (v0.1.0)
 
 | नियम आईडी | विवरण |
-| --------- | ------------- |
+|---------|-------------|
 | `html.document.missing_lang` | `<html>` तत्व में `lang` विशेषता गायब है। |
 | `html.img.missing_alt` | `<img>` तत्व में `alt` विशेषता गायब है। |
 | `html.form_control.missing_label` | फॉर्म नियंत्रण में संबंधित लेबल गायब है। |
@@ -104,6 +105,14 @@ results/
 
 ---
 
+## सुरक्षा और डेटा दायरा
+
+**डेटा जो उपयोग किया जाता है:** CLI तर्कों के रूप में दिए गए HTML फ़ाइलें (केवल पढ़ने के लिए), निष्कर्ष और प्रमाण `--out` निर्देशिका में लिखे जाते हैं। **डेटा जो उपयोग नहीं किया जाता है:** निर्दिष्ट तर्कों और आउटपुट निर्देशिका के बाहर कोई भी फ़ाइल, कोई भी OS क्रेडेंशियल, कोई भी ब्राउज़र डेटा। **कोई नेटवर्क कनेक्शन नहीं:** सभी स्कैनिंग स्थानीय रूप से होती है। **कोई टेलीमेट्री** एकत्र या भेजा नहीं जाता है।
+
 ## लाइसेंस
 
 [MIT](LICENSE)
+
+---
+
+<a href="https://mcp-tool-shop.github.io/">MCP Tool Shop</a> द्वारा निर्मित।

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
+  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.md">English</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
 </p>
 
 <p align="center">
@@ -9,6 +9,7 @@
 <p align="center">
   <a href="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.npmjs.com/package/@mcptoolshop/a11y-evidence-engine"><img src="https://img.shields.io/npm/v/@mcptoolshop/a11y-evidence-engine" alt="npm"></a>
+  <a href="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine"><img src="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine/branch/main/graph/badge.svg" alt="Coverage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License"></a>
   <a href="https://mcp-tool-shop-org.github.io/a11y-evidence-engine/"><img src="https://img.shields.io/badge/Landing_Page-live-blue" alt="Landing Page"></a>
 </p>
@@ -21,10 +22,10 @@ Diseñado para funcionar en conjunto con **a11y-assist**: este motor identifica 
 
 ## Características
 
-- **Resultado determinista**: la misma entrada siempre produce los mismos resultados y trazabilidad.
-- **Compatible con prov-spec**: cada hallazgo incluye evidencia verificable criptográficamente.
-- **Amigable para CI**: códigos de salida diseñados para la automatización.
-- **No requiere navegador**: análisis estático de HTML puro.
+- **Resultado determinista:** la misma entrada siempre produce los mismos resultados y trazabilidad.
+- **Compatible con prov-spec:** cada hallazgo incluye evidencia verificable criptográficamente.
+- **Amigable para CI:** códigos de salida diseñados para la automatización.
+- **No requiere navegador:** análisis estático de HTML puro.
 
 ---
 
@@ -64,8 +65,8 @@ results/
 
 ## Códigos de salida
 
-| Code | Significado |
-| ------ | --------- |
+| Código | Significado |
+|------|---------|
 | 0 | No se encontraron problemas con la severidad "error". |
 | 2 | Se encontró al menos un problema con la severidad "error". |
 | 3 | Fallo interno del motor / entrada inválida. |
@@ -75,11 +76,11 @@ results/
 ## Reglas (v0.1.0)
 
 | ID de la regla | Descripción |
-| --------- | ------------- |
-| `html.document.missing_lang` | El elemento `<html>` no tiene el atributo "lang". |
-| `html.img.missing_alt` | El elemento `<img>` no tiene el atributo "alt". |
-| `html.form_control.missing_label` | Un control de formulario no tiene una etiqueta asociada. |
-| `html.interactive.missing_name` | Un elemento interactivo no tiene un nombre accesible. |
+|---------|-------------|
+| `html.document.missing_lang` | Elemento `<html>` sin el atributo `lang`. |
+| `html.img.missing_alt` | Elemento `<img>` sin el atributo `alt`. |
+| `html.form_control.missing_label` | Elemento de control de formulario sin etiqueta asociada. |
+| `html.interactive.missing_name` | Elemento interactivo sin nombre accesible. |
 
 ---
 
@@ -99,11 +100,19 @@ Estos registros se pueden verificar de forma independiente sin confiar en el mot
 
 - [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - Especificación de trazabilidad.
 - [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - Herramientas MCP para accesibilidad.
-- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - Asesor de corrección.
+- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - Asistente de corrección.
 - [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - Demostración con flujos de trabajo de CI.
 
 ---
 
+## Seguridad y alcance de datos
+
+**Datos accedidos:** archivos HTML pasados como argumentos de línea de comandos (solo lectura), resultados y trazabilidad escritos en el directorio `--out`. **Datos NO accedidos:** ningún archivo fuera de los argumentos especificados y el directorio de salida, ninguna credencial del sistema operativo, ningún dato del navegador. **No hay salida de red:** todo el análisis se realiza localmente. **No se recopilan ni se envían datos de telemetría.**
+
 ## Licencia
 
 [MIT](LICENSE)
+
+---
+
+Creado por <a href="https://mcp-tool-shop.github.io/">MCP Tool Shop</a>

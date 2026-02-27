@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
+  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.md">English</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
 </p>
 
 <p align="center">
@@ -9,13 +9,14 @@
 <p align="center">
   <a href="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.npmjs.com/package/@mcptoolshop/a11y-evidence-engine"><img src="https://img.shields.io/npm/v/@mcptoolshop/a11y-evidence-engine" alt="npm"></a>
+  <a href="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine"><img src="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine/branch/main/graph/badge.svg" alt="Coverage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License"></a>
   <a href="https://mcp-tool-shop-org.github.io/a11y-evidence-engine/"><img src="https://img.shields.io/badge/Landing_Page-live-blue" alt="Landing Page"></a>
 </p>
 
 **Moteur d'analyse de l'accessibilité sans interface utilisateur, qui génère des enregistrements de traçabilité au format [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec).**
 
-Conçu pour fonctionner en complément de **a11y-assist** : ce moteur identifie les problèmes et collecte des preuves vérifiables ; a11y-assist transforme ces résultats en corrections.
+Conçu pour fonctionner en tandem avec **a11y-assist** : ce moteur détecte les problèmes et collecte des preuves vérifiables ; a11y-assist transforme ces résultats en corrections.
 
 ---
 
@@ -65,9 +66,9 @@ results/
 ## Codes de sortie
 
 | Code | Signification |
-| ------ | --------- |
-| 0 | Aucune anomalie détectée avec la sévérité "erreur". |
-| 2 | Au moins une anomalie détectée avec la sévérité "erreur". |
+|------|---------|
+| 0 | Aucun résultat avec la sévérité "erreur". |
+| 2 | Au moins un résultat avec la sévérité "erreur". |
 | 3 | Erreur interne du moteur / entrée invalide. |
 
 ---
@@ -75,17 +76,17 @@ results/
 ## Règles (v0.1.0)
 
 | Identifiant de la règle | Description |
-| --------- | ------------- |
+|---------|-------------|
 | `html.document.missing_lang` | L'élément `<html>` est dépourvu de l'attribut `lang`. |
 | `html.img.missing_alt` | L'élément `<img>` est dépourvu de l'attribut `alt`. |
-| `html.form_control.missing_label` | Un élément de formulaire est dépourvu de son étiquette associée. |
-| `html.interactive.missing_name` | Un élément interactif est dépourvu de son nom accessible. |
+| `html.form_control.missing_label` | Un élément de formulaire est dépourvu de l'étiquette associée. |
+| `html.interactive.missing_name` | Un élément interactif est dépourvu d'un nom accessible. |
 
 ---
 
 ## Traçabilité
 
-Chaque anomalie inclut trois enregistrements au format prov-spec :
+Chaque résultat inclut trois enregistrements au format prov-spec :
 
 1. **record.json** : Extraction des preuves à l'aide de `engine.extract.evidence.json_pointer`.
 2. **digest.json** : Hachage SHA-256 des preuves canoniques à l'aide de `integrity.digest.sha256`.
@@ -95,7 +96,7 @@ Ces enregistrements peuvent être vérifiés indépendamment, sans avoir à fair
 
 ---
 
-## Liens connexes
+## Liés
 
 - [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - Spécification de la traçabilité.
 - [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - Outils MCP pour l'accessibilité.
@@ -104,6 +105,14 @@ Ces enregistrements peuvent être vérifiés indépendamment, sans avoir à fair
 
 ---
 
+## Sécurité et portée des données
+
+**Données consultées :** fichiers HTML passés en arguments de ligne de commande (lecture seule), résultats et traçabilité écrits dans le répertoire `--out`. **Données NON consultées :** aucun fichier en dehors des arguments spécifiés et du répertoire de sortie, aucune information d'identification du système d'exploitation, aucune donnée de navigateur. **Aucune communication réseau sortante** : toutes les analyses sont locales. **Aucune télémétrie** n'est collectée ou envoyée.
+
 ## Licence
 
 [MIT](LICENSE)
+
+---
+
+Développé par <a href="https://mcp-tool-shop.github.io/">MCP Tool Shop</a>

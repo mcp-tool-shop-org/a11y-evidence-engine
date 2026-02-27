@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="README.ja.md">日本語</a> | <a href="README.zh.md">中文</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
+  <a href="README.ja.md">日本語</a> | <a href="README.md">English</a> | <a href="README.es.md">Español</a> | <a href="README.fr.md">Français</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.it.md">Italiano</a> | <a href="README.pt-BR.md">Português (BR)</a>
 </p>
 
 <p align="center">
@@ -9,21 +9,22 @@
 <p align="center">
   <a href="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/a11y-evidence-engine/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.npmjs.com/package/@mcptoolshop/a11y-evidence-engine"><img src="https://img.shields.io/npm/v/@mcptoolshop/a11y-evidence-engine" alt="npm"></a>
+  <a href="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine"><img src="https://codecov.io/gh/mcp-tool-shop-org/a11y-evidence-engine/branch/main/graph/badge.svg" alt="Coverage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License"></a>
   <a href="https://mcp-tool-shop-org.github.io/a11y-evidence-engine/"><img src="https://img.shields.io/badge/Landing_Page-live-blue" alt="Landing Page"></a>
 </p>
 
-**一个无头可访问性检测引擎，它会生成 [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) 溯源记录。**
+**一个无头可访问性检测引擎，用于生成 [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) 溯源记录。**
 
-该引擎旨在与 **a11y-assist** 配合使用：它会发现问题并捕获可验证的证据；a11y-assist 会将这些发现转化为修复方案。
+该引擎旨在与 **a11y-assist** 配合使用：它能够发现问题并记录可验证的证据；而 a11y-assist 则将这些发现转化为修复方案。
 
 ---
 
 ## 特性
 
-- **确定性输出**：相同的输入始终产生相同的发现和溯源信息。
-- **与 prov-spec 兼容**：每个发现都包含密码学上可验证的证据。
-- **适用于 CI 环境**：退出码设计用于自动化。
+- **确定性输出**：相同的输入始终产生相同的检测结果和溯源信息。
+- **与 prov-spec 兼容**：每个检测结果都包含密码学上可验证的证据。
+- **适用于 CI 环境**：退出码设计用于自动化流程。
 - **无需浏览器**：纯静态 HTML 分析。
 
 ---
@@ -64,18 +65,18 @@ results/
 
 ## 退出码
 
-| Code | 含义 |
-| ------ | --------- |
+| 代码 | 含义 |
+|------|---------|
 | 0 | 没有发现任何严重程度为 `error` 的问题。 |
-| 2 | 至少发现了一个严重程度为 `error` 的问题。 |
-| 3 | 引擎内部错误 / 无效输入。 |
+| 2 | 至少发现了一个 `error` 级别的错误。 |
+| 3 | 引擎内部错误/无效输入。 |
 
 ---
 
 ## 规则 (v0.1.0)
 
 | 规则 ID | 描述 |
-| --------- | ------------- |
+|---------|-------------|
 | `html.document.missing_lang` | `<html>` 元素缺少 `lang` 属性。 |
 | `html.img.missing_alt` | `<img>` 元素缺少 `alt` 属性。 |
 | `html.form_control.missing_label` | 表单控件缺少关联的标签。 |
@@ -85,13 +86,13 @@ results/
 
 ## 溯源信息
 
-每个发现都包含三个 prov-spec 记录：
+每个检测结果都包含三个 prov-spec 记录：
 
-1. **record.json**：使用 `engine.extract.evidence.json_pointer` 提取证据。
-2. **digest.json**：使用 `integrity.digest.sha256` 计算规范证据的 SHA-256 哈希值。
-3. **envelope.json**：使用 `adapter.wrap.envelope_v0_1` 包装结果。
+1. **record.json**：使用 `engine.extract.evidence.json_pointer` 提取的证据。
+2. **digest.json**：使用 `integrity.digest.sha256` 计算的规范化证据的 SHA-256 哈希值。
+3. **envelope.json**：使用 `adapter.wrap.envelope_v0_1` 包装的结果。
 
-这些记录可以在不信任引擎的情况下独立进行验证。
+这些记录可以独立验证，无需信任引擎。
 
 ---
 
@@ -104,6 +105,14 @@ results/
 
 ---
 
+## 安全与数据范围
+
+**访问的数据：** 作为命令行参数传递的 HTML 文件（只读），检测结果和溯源信息写入到 `--out` 目录。 **未访问的数据：** 不包括指定参数和输出目录之外的文件，不包括操作系统凭据，也不包括浏览器数据。 **无网络访问**：所有扫描都是本地进行的。 **不收集或发送任何遥测数据**。
+
 ## 许可证
 
 [MIT](LICENSE)
+
+---
+
+由 <a href="https://mcp-tool-shop.github.io/">MCP Tool Shop</a> 构建。
