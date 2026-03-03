@@ -1,0 +1,1055 @@
+{
+  "version": 1,
+  "entries": {
+    "58219e5ed5c2d01d": {
+      "translation": "**ヘッドレスアクセシビリティ検証エンジン。 [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) に準拠したトレーサビリティ情報を出力します。**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "0d55c950664dd97d": {
+      "translation": "**a11y-assist** と連携するように設計されています。このエンジンは問題点を検出し、検証可能な証拠を収集し、a11y-assist はそれらの結果を修正に変換します。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "fc8e4bf84165ea76": {
+      "translation": "機能",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "b4a56a8fd4092442": {
+      "translation": "- **決定論的な出力:** 同じ入力に対して常に同じ結果（問題点とトレーサビリティ情報）を出力します。\n- **prov-spec 準拠:** すべての問題点には、暗号学的に検証可能な証拠が含まれています。\n- **CI 環境に最適:** 自動化のために設計された終了コードを提供します。\n- **ブラウザ不要:** 静的な HTML ファイルのみを解析します。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "d88005a6cdf9c925": {
+      "translation": "インストール",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "5a1bcd947bd94196": {
+      "translation": "使用方法",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "493a741e18ad3962": {
+      "translation": "出力",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "2e22400e9cbba1b8": {
+      "translation": "終了コード",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "58123bdea582f8e2": {
+      "translation": "意味",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "69e70b451ff65bf9": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "2a56d6ea96d9fd14": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "25aab30269cb6a65": {
+      "translation": "`error` 以上の重大度を持つ問題点が見つからなかった",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "f03c06720668fad3": {
+      "translation": "少なくとも 1 つの `error` の重大度を持つ問題点が見つかった",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662882
+    },
+    "afd93ceb8f415d2b": {
+      "translation": "エンジンの内部エラーまたは無効な入力",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "ca0239e29c7d0a2e": {
+      "translation": "ルール (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "66b8aa168a7722c0": {
+      "translation": "ルール ID",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "67731479bd4e364b": {
+      "translation": "説明",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "651826877e732548": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "88e61534b9c17720": {
+      "translation": "`<html>` 要素に `lang` 属性が設定されていない",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "4b4ef621cf02598a": {
+      "translation": "`<img>` 要素に `alt` 属性が設定されていない",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "8a1d0f2447133970": {
+      "translation": "フォームコントロールに関連するラベルが設定されていない",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "28fe4be1e5efebef": {
+      "translation": "インタラクティブな要素にアクセシブルな名前が設定されていない",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "bc54525eede82dd2": {
+      "translation": "トレーサビリティ",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "ecb62775cb2628a1": {
+      "translation": "各問題点には、prov-spec に準拠した 3 つのレコードが含まれています。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "bd3512ed329d2bf3": {
+      "translation": "1. **record.json**: `engine.extract.evidence.json_pointer` を使用して証拠を抽出します。\n2. **digest.json**: `integrity.digest.sha256` を使用して、正規化された証拠の SHA-256 ハッシュ値を計算します。\n3. **envelope.json**: `adapter.wrap.envelope_v0_1` を使用して結果をラップします。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "7d22c2da3bd3409f": {
+      "translation": "これらのレコードは、エンジンを信頼しなくても、個別に検証することができます。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "1eb042d64621214a": {
+      "translation": "関連",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "5c2c764ce5cbc947": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - トレーサビリティ仕様\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - アクセシビリティのための MCP ツール\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - 修正アドバイザー\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - CI ワークフローを使用したデモ",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "08ea9dfbe36d981b": {
+      "translation": "ライセンス",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "5e7c5653fc3efae7": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087662883
+    },
+    "f95ed03f7d9a1768": {
+      "translation": "**一个无头可访问性检测引擎，它会生成 [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) 溯源记录。**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "2356000f8c6f2382": {
+      "translation": "该引擎旨在与 **a11y-assist** 配合使用：它会发现问题并捕获可验证的证据；a11y-assist 会将这些发现转化为修复方案。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "c6c20d03bfc6bd19": {
+      "translation": "特性",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "65039d5c8caa23ab": {
+      "translation": "- **确定性输出**：相同的输入始终产生相同的发现和溯源信息。\n- **与 prov-spec 兼容**：每个发现都包含密码学上可验证的证据。\n- **适用于 CI 环境**：退出码设计用于自动化。\n- **无需浏览器**：纯静态 HTML 分析。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "108c3bdaeaac02ca": {
+      "translation": "安装",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "0701e0fdda9d1418": {
+      "translation": "使用方法",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "4864c494c355f4e1": {
+      "translation": "输出",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "7a04b47e3bc57a61": {
+      "translation": "退出码",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "d92f14b6efff6a75": {
+      "translation": "含义",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "7b7596c3d1d0c899": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "3c50ad19fc6c359b": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "50212a11949c895f": {
+      "translation": "没有发现任何严重程度为 `error` 的问题。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "ddee6493e719d2d8": {
+      "translation": "至少发现了一个严重程度为 `error` 的问题。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "5d8ee3b7533352b0": {
+      "translation": "引擎内部错误 / 无效输入。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "b32caa931e9c708b": {
+      "translation": "规则 (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "669fb6206d5b3fa6": {
+      "translation": "规则 ID",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "601d6e570e22e932": {
+      "translation": "描述",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "dd5b28ff24f8cbdb": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "89bd54dc093bc18d": {
+      "translation": "`<html>` 元素缺少 `lang` 属性。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "d8b6289b4a31e6c4": {
+      "translation": "`<img>` 元素缺少 `alt` 属性。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "d03298f0e16f175f": {
+      "translation": "表单控件缺少关联的标签。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "99b74190171a381d": {
+      "translation": "交互式元素缺少可访问的名称。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "b1f80a183dad7680": {
+      "translation": "溯源信息",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "3039090e7a058f4a": {
+      "translation": "每个发现都包含三个 prov-spec 记录：",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "79e2a581e0ae457f": {
+      "translation": "1. **record.json**：使用 `engine.extract.evidence.json_pointer` 提取证据。\n2. **digest.json**：使用 `integrity.digest.sha256` 计算规范证据的 SHA-256 哈希值。\n3. **envelope.json**：使用 `adapter.wrap.envelope_v0_1` 包装结果。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "441b0160a03fb992": {
+      "translation": "这些记录可以在不信任引擎的情况下独立进行验证。",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "e1087cb5842c831a": {
+      "translation": "相关项目",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "6eb4f877d2d5a652": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - 溯源规范\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - 用于可访问性的 MCP 工具\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - 修复建议工具\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - 包含 CI 工作流的演示站点",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "1fb815b9a436fadb": {
+      "translation": "许可证",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "892c2aa834c19cc2": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087680770
+    },
+    "c6f677b357705830": {
+      "translation": "**Motor de análisis de accesibilidad sin interfaz que genera registros de trazabilidad según la especificación [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec).**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "c5ebf244504f6821": {
+      "translation": "Diseñado para funcionar en conjunto con **a11y-assist**: este motor identifica problemas y recopila evidencia verificable; a11y-assist transforma esos hallazgos en soluciones.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "422fb4b958d31758": {
+      "translation": "Características",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "39d75314d1ec7925": {
+      "translation": "- **Resultado determinista**: la misma entrada siempre produce los mismos resultados y trazabilidad.\n- **Compatible con prov-spec**: cada hallazgo incluye evidencia verificable criptográficamente.\n- **Amigable para CI**: códigos de salida diseñados para la automatización.\n- **No requiere navegador**: análisis estático de HTML puro.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "c9f8b84d688aa64b": {
+      "translation": "Instalación",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "ef34faaf2d434dc4": {
+      "translation": "Uso",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "51969d1878184ac9": {
+      "translation": "Salida",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "ead6d0852bab11de": {
+      "translation": "Códigos de salida",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "a9e0b03a532423f7": {
+      "translation": "Significado",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "4110d0f8faecdeab": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "f2088caa76d4a948": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "2a26d8c5df877903": {
+      "translation": "No se encontraron problemas con la severidad \"error\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "7ea191816fa45462": {
+      "translation": "Se encontró al menos un problema con la severidad \"error\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "32a448babd96dd5f": {
+      "translation": "Fallo interno del motor / entrada inválida.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "3c9705d08efd3e9b": {
+      "translation": "Reglas (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "1033803bd63a92a7": {
+      "translation": "ID de la regla",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "a0102622d03d4c0f": {
+      "translation": "Descripción",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "184e6ce2c9237895": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "06017fbbdb42da3f": {
+      "translation": "El elemento `<html>` no tiene el atributo \"lang\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "ac19beecce4d73d4": {
+      "translation": "El elemento `<img>` no tiene el atributo \"alt\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "4db04de13ad30806": {
+      "translation": "Un control de formulario no tiene una etiqueta asociada.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "a59a0a3d6138d576": {
+      "translation": "Un elemento interactivo no tiene un nombre accesible.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "2aed7fc717171bf5": {
+      "translation": "Trazabilidad",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "64578ed20e507764": {
+      "translation": "Cada hallazgo incluye tres registros prov-spec:",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "003fbc05d8a5dab6": {
+      "translation": "1. **record.json**: Extracción de evidencia utilizando `engine.extract.evidence.json_pointer`.\n2. **digest.json**: Hash SHA-256 de la evidencia canónica utilizando `integrity.digest.sha256`.\n3. **envelope.json**: Resultado encapsulado utilizando `adapter.wrap.envelope_v0_1`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "84985d39e6104dde": {
+      "translation": "Estos registros se pueden verificar de forma independiente sin confiar en el motor.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "7427f620e7051d56": {
+      "translation": "Relacionado",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "cce36623139f08bc": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - Especificación de trazabilidad.\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - Herramientas MCP para accesibilidad.\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - Asesor de corrección.\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - Demostración con flujos de trabajo de CI.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "9572f74b6d3f62b1": {
+      "translation": "Licencia",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "e4731ea7699353e4": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087699255
+    },
+    "4c6dec79ae404300": {
+      "translation": "**Moteur d'analyse de l'accessibilité sans interface utilisateur, qui génère des enregistrements de traçabilité au format [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec).**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "d2e70b021e6e9e8b": {
+      "translation": "Conçu pour fonctionner en complément de **a11y-assist** : ce moteur identifie les problèmes et collecte des preuves vérifiables ; a11y-assist transforme ces résultats en corrections.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "9244388ee3d9cea2": {
+      "translation": "Fonctionnalités",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "9e99443567810d1e": {
+      "translation": "- **Résultats déterministes** : les mêmes entrées produisent toujours les mêmes résultats et la même traçabilité.\n- **Compatible avec prov-spec** : chaque résultat inclut des preuves vérifiables cryptographiquement.\n- **Adapté aux environnements CI** : codes de sortie conçus pour l'automatisation.\n- **Aucun navigateur requis** : analyse statique pure du code HTML.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "4077bbda21e83042": {
+      "translation": "Installation",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "35b366dd8551138a": {
+      "translation": "Utilisation",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "57b2052ceb75361e": {
+      "translation": "Sortie",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "ea3b5c49e509bd45": {
+      "translation": "Codes de sortie",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "785c7a450a789477": {
+      "translation": "Signification",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "86d5118e773cafab": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "9c7087410e6c6801": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "42f949467b1763ca": {
+      "translation": "Aucune anomalie détectée avec la sévérité \"erreur\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "4503c9c561d20365": {
+      "translation": "Au moins une anomalie détectée avec la sévérité \"erreur\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "42a9a01f00bc579c": {
+      "translation": "Erreur interne du moteur / entrée invalide.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "8024c2f7fcf7502e": {
+      "translation": "Règles (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "f4cb4d3050926cef": {
+      "translation": "Identifiant de la règle",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "9a51c5b4f05710c0": {
+      "translation": "Description",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "42738f280dbf39b2": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "c109baa0ad0e44fb": {
+      "translation": "L'élément `<html>` est dépourvu de l'attribut `lang`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "56c025279ad08746": {
+      "translation": "L'élément `<img>` est dépourvu de l'attribut `alt`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "7a0f2b726f1813de": {
+      "translation": "Un élément de formulaire est dépourvu de son étiquette associée.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "d6127784877abf42": {
+      "translation": "Un élément interactif est dépourvu de son nom accessible.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "25241fb5e9a2fc01": {
+      "translation": "Traçabilité",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "c60d8a079a209331": {
+      "translation": "Chaque anomalie inclut trois enregistrements au format prov-spec :",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "a23e7939d9dce540": {
+      "translation": "1. **record.json** : Extraction des preuves à l'aide de `engine.extract.evidence.json_pointer`.\n2. **digest.json** : Hachage SHA-256 des preuves canoniques à l'aide de `integrity.digest.sha256`.\n3. **envelope.json** : Résultat encapsulé à l'aide de `adapter.wrap.envelope_v0_1`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "3a0b1c79790f2144": {
+      "translation": "Ces enregistrements peuvent être vérifiés indépendamment, sans avoir à faire confiance au moteur.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "cc69b11148f6ac8d": {
+      "translation": "Liens connexes",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "a3d477d6c4fd4c66": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - Spécification de la traçabilité.\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - Outils MCP pour l'accessibilité.\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - Assistant de correction.\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - Démonstration avec des flux de travail CI.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "0174ffc9d6992c72": {
+      "translation": "Licence",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "c19c2b7dfc530297": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087719313
+    },
+    "80a79395f07d31ef": {
+      "translation": "**एक \"हेडलेस\" एक्सेसिबिलिटी जांच इंजन जो [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) प्रमाण रिकॉर्ड उत्पन्न करता है।**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "43ae7cd92ccf6ca4": {
+      "translation": "यह इंजन **a11y-assist** के साथ काम करने के लिए डिज़ाइन किया गया है: यह इंजन समस्याओं का पता लगाता है और सत्यापन योग्य प्रमाण एकत्र करता है; a11y-assist उन निष्कर्षों को समाधानों में बदल देता है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "d0bfd0df3ecd0d7f": {
+      "translation": "विशेषताएं",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "e72524c6bc6e736a": {
+      "translation": "- **निश्चित आउटपुट:** समान इनपुट हमेशा समान निष्कर्ष और प्रमाण उत्पन्न करता है।\n- **prov-spec के साथ संगत:** प्रत्येक निष्कर्ष में क्रिप्टोग्राफिक रूप से सत्यापन योग्य प्रमाण शामिल होता है।\n- **CI-अनुकूल:** स्वचालन के लिए डिज़ाइन किए गए एग्जिट कोड।\n- **ब्राउज़र की आवश्यकता नहीं:** केवल स्थिर HTML विश्लेषण।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "ed383afd27175535": {
+      "translation": "स्थापना",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "98a2f8cba1b36eff": {
+      "translation": "उपयोग",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "c3e9c0122ecf1cf4": {
+      "translation": "आउटपुट",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "92abed1747d9195a": {
+      "translation": "एग्जिट कोड",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "8e6cc4fa69314024": {
+      "translation": "अर्थ",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "1cb2d43271f2ec1d": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "1a20fc4dc8ce3304": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "8c836d4e5aede3b2": {
+      "translation": "कोई भी गंभीर त्रुटि नहीं मिली।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "c33039df3671a06e": {
+      "translation": "कम से कम एक गंभीर त्रुटि मिली।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "5115e3b83b254742": {
+      "translation": "इंजन में आंतरिक त्रुटि / अमान्य इनपुट।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "b2d51ffcdb5f85f3": {
+      "translation": "नियम (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "891fe79090c98cff": {
+      "translation": "नियम आईडी",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "b8423b5b4842cbda": {
+      "translation": "विवरण",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "bc35e1f9228e8622": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "2f8523eaf5ac04e2": {
+      "translation": "`<html>` तत्व में `lang` विशेषता गायब है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "0d6968bd4ed0c814": {
+      "translation": "`<img>` तत्व में `alt` विशेषता गायब है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "a2b33ff67d3d8fff": {
+      "translation": "फॉर्म नियंत्रण में संबंधित लेबल गायब है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "d703d956575778c9": {
+      "translation": "इंटरैक्टिव तत्व में सुलभ नाम गायब है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "a6fc667c9b2f60c0": {
+      "translation": "प्रमाण",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "b06c5b2228e7aa31": {
+      "translation": "प्रत्येक निष्कर्ष में तीन prov-spec रिकॉर्ड शामिल हैं:",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "acd12a50d25b8676": {
+      "translation": "1. **record.json**: `engine.extract.evidence.json_pointer` का उपयोग करके प्रमाण निष्कर्षण।\n2. **digest.json**: `integrity.digest.sha256` का उपयोग करके मानक प्रमाण का SHA-256 हैश।\n3. **envelope.json**: `adapter.wrap.envelope_v0_1` का उपयोग करके लिपटे हुए परिणाम।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "57769155ec2d7f16": {
+      "translation": "ये रिकॉर्ड इंजन पर भरोसा किए बिना स्वतंत्र रूप से सत्यापित किए जा सकते हैं।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "198202c8da4b38a1": {
+      "translation": "संबंधित",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "2cc2431ca3538446": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - प्रमाण विनिर्देश।\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - एक्सेसिबिलिटी के लिए MCP उपकरण।\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - समाधान सलाहकार।\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - CI वर्कफ़्लो के साथ डेमो।",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "cfbc372f8058f151": {
+      "translation": "लाइसेंस",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "69121a20c478d6f4": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087738175
+    },
+    "d8c331b910a57a91": {
+      "translation": "**Motore di analisi dell'accessibilità senza interfaccia utente che genera record di provenienza conformi a [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec).**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "8ea77bf8ed41eed9": {
+      "translation": "Progettato per essere utilizzato in combinazione con **a11y-assist**: questo motore individua i problemi e raccoglie prove verificabili; a11y-assist trasforma queste scoperte in soluzioni.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "bd2eda68a403934d": {
+      "translation": "Caratteristiche",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "21d060c15e47c020": {
+      "translation": "- **Output deterministico**: lo stesso input produce sempre risultati identici e informazioni sulla provenienza.\n- **Compatibile con prov-spec**: ogni risultato include prove verificabili crittograficamente.\n- **Adatto per l'integrazione continua (CI)**: codici di uscita progettati per l'automazione.\n- **Non richiede un browser**: analisi statica di file HTML.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "7b0c73c0f5463dff": {
+      "translation": "Installazione",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "dce66a0db971cc12": {
+      "translation": "Utilizzo",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "64e156f88c9d518d": {
+      "translation": "Output",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "84b4e4ea8e580337": {
+      "translation": "Codici di uscita",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "69fb964a4ef1e52e": {
+      "translation": "Significato",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "a8e2cbb75c81ee97": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "859008cc19c8d7e4": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "e346352d20e42c90": {
+      "translation": "Nessun risultato con gravità \"errore\"",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "95826ea1661e028d": {
+      "translation": "Almeno un risultato con gravità \"errore\"",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "f03689d3df2b7cf3": {
+      "translation": "Errore interno del motore / input non valido",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "393229e19321c12c": {
+      "translation": "Regole (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "53029d94f1ad9f6e": {
+      "translation": "ID della regola",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "3af38881e7f28db0": {
+      "translation": "Descrizione",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "5acc6809afb159f0": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "9fca3ea5d6a826c6": {
+      "translation": "Elemento `<html>` privo dell'attributo `lang`",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "bebe7b02b5587dd0": {
+      "translation": "Elemento `<img>` privo dell'attributo `alt`",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "5bb83864b4fb02e3": {
+      "translation": "Elemento di controllo del modulo privo dell'etichetta associata",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "3e309b1ac63d3e72": {
+      "translation": "Elemento interattivo privo di un nome accessibile",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "92aba4aeaa7835c2": {
+      "translation": "Provenienza",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "a81d44f7a0b1293c": {
+      "translation": "Ogni risultato include tre record conformi a prov-spec:",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "9fba6bb11f555bd6": {
+      "translation": "1. **record.json**: Estrazione delle prove utilizzando `engine.extract.evidence.json_pointer`\n2. **digest.json**: Hash SHA-256 delle prove standardizzate utilizzando `integrity.digest.sha256`\n3. **envelope.json**: Risultato incapsulato utilizzando `adapter.wrap.envelope_v0_1`",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "d11a15fa80d180d2": {
+      "translation": "Questi record possono essere verificati indipendentemente, senza dover fidarsi del motore.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "5b40fe1c944f2442": {
+      "translation": "Correlati",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "798a10719bed406a": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - Specifiche sulla provenienza\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - Strumenti MCP per l'accessibilità\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - Suggerimenti per la correzione\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - Dimostrazione con flussi di lavoro CI",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "0870aa1dcfea97cc": {
+      "translation": "Licenza",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "c87c0c0fca261018": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087757649
+    },
+    "c3ab835fd2a6a250": {
+      "translation": "**Motor de análise de acessibilidade sem interface que gera registros de rastreabilidade [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec).**",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "c2ab906b31ca1ffa": {
+      "translation": "Projetado para funcionar em conjunto com o **a11y-assist**: este motor identifica problemas e coleta evidências verificáveis; o a11y-assist transforma essas descobertas em soluções.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "6fbe4c0ef1edf268": {
+      "translation": "Características",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "55ba9110e4aa9525": {
+      "translation": "- **Saída determinística:** a mesma entrada sempre produz os mesmos resultados e informações de rastreabilidade.\n- **Compatível com prov-spec:** cada descoberta inclui evidências verificáveis criptograficamente.\n- **Compatível com CI:** códigos de saída projetados para automação.\n- **Não requer navegador:** análise estática de HTML.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "eb9ad24c5bdd2790": {
+      "translation": "Instalação",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "2dc7b1f6ea4a38fe": {
+      "translation": "Uso",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "0b3e0fa46881d1eb": {
+      "translation": "Saída",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "18d31170dcf1f21d": {
+      "translation": "Códigos de Saída",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "47d1e04b68b670ac": {
+      "translation": "Significado",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "93982127e708d976": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "eeb243aa53a24f8e": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "4072492524c5008b": {
+      "translation": "Nenhuma descoberta com severidade \"erro\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "3ab1618a517174c1": {
+      "translation": "Pelo menos uma descoberta com severidade \"erro\".",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "624bb77dc410efbd": {
+      "translation": "Falha interna do motor / entrada inválida.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "c794386212371a89": {
+      "translation": "Regras (v0.1.0)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "91d921d2c7f35b1b": {
+      "translation": "ID da Regra",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "4fe83802bbc45fcc": {
+      "translation": "Descrição",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "7561209f94247c19": {
+      "translation": "-------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "ee847325ed850241": {
+      "translation": "Elemento `<html>` sem o atributo `lang`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "32f0bf492ec54032": {
+      "translation": "Elemento `<img>` sem o atributo `alt`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "d24b4a53c26059be": {
+      "translation": "Elemento de controle de formulário sem o rótulo associado.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "b91eb6a0aeb404ac": {
+      "translation": "Elemento interativo sem um nome acessível.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "288fa51f04325a20": {
+      "translation": "Rastreabilidade",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "7f7f29927e8915e4": {
+      "translation": "Cada descoberta inclui três registros prov-spec:",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "0d751f2f1ee85ce1": {
+      "translation": "1. **record.json**: Extração de evidências usando `engine.extract.evidence.json_pointer`.\n2. **digest.json**: Hash SHA-256 das evidências canônicas usando `integrity.digest.sha256`.\n3. **envelope.json**: Resultado encapsulado usando `adapter.wrap.envelope_v0_1`.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "7a47cb96ad35e4e2": {
+      "translation": "Esses registros podem ser verificados independentemente, sem a necessidade de confiar no motor.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "5f391e9e92b2150c": {
+      "translation": "Relacionado",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "b8930abc1b194e2a": {
+      "translation": "- [prov-spec](https://github.com/mcp-tool-shop-org/prov-spec) - Especificação de rastreabilidade.\n- [a11y-mcp-tools](https://github.com/mcp-tool-shop-org/a11y-mcp-tools) - Ferramentas MCP para acessibilidade.\n- [a11y-assist](https://github.com/mcp-tool-shop-org/a11y-assist) - Sugestões de correção.\n- [a11y-demo-site](https://github.com/mcp-tool-shop-org/a11y-demo-site) - Demonstração com fluxos de trabalho de CI.",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "2aca9b0e72841008": {
+      "translation": "Licença",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    },
+    "8026854d56a5486a": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772087776978
+    }
+  }
+}

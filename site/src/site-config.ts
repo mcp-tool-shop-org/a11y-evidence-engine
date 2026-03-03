@@ -6,7 +6,7 @@ export const config: SiteConfig = {
   logoBadge: 'AE',
   brandName: 'a11y-evidence-engine',
   repoUrl: 'https://github.com/mcp-tool-shop-org/a11y-evidence-engine',
-  npmUrl: 'https://www.npmjs.com/package/@mcptoolshop/a11y-evidence-engine',
+  npmUrl: 'https://www.npmjs.com/package/@accessibility-suite/evidence-engine',
   footerText: 'MIT Licensed \u2014 built by <a href="https://github.com/mcp-tool-shop-org" style="color:var(--color-muted);text-decoration:underline">mcp-tool-shop-org</a>',
 
   hero: {
@@ -17,7 +17,7 @@ export const config: SiteConfig = {
     primaryCta: { href: '#quick-start', label: 'Get started' },
     secondaryCta: { href: '#features', label: 'Learn more' },
     previews: [
-      { label: 'Install', code: 'npm install -g @mcptoolshop/a11y-evidence-engine' },
+      { label: 'Install', code: 'npm install -g @accessibility-suite/evidence-engine' },
       { label: 'Scan', code: 'a11y-engine scan ./html --out ./results' },
       { label: 'Verify', code: 'cat results/provenance/finding-0001/digest.json' },
     ],
@@ -45,7 +45,7 @@ export const config: SiteConfig = {
       cards: [
         {
           title: 'Scan & review',
-          code: 'npm install -g @mcptoolshop/a11y-evidence-engine\n\n# Scan a file or directory\na11y-engine scan ./path/to/html --out ./results\n\n# View help\na11y-engine --help',
+          code: 'npm install -g @accessibility-suite/evidence-engine\n\n# Scan a file or directory\na11y-engine scan ./path/to/html --out ./results\n\n# View help\na11y-engine --help',
         },
         {
           title: 'Output structure',
