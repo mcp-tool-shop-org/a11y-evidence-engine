@@ -15,7 +15,7 @@ export const config: SiteConfig = {
     headlineAccent: 'findings you can verify.',
     description: 'Headless accessibility scanner that emits prov-spec provenance records. Every finding includes cryptographically verifiable evidence \u2014 no browser required, deterministic output, CI-ready.',
     primaryCta: { href: '#quick-start', label: 'Get started' },
-    secondaryCta: { href: '#features', label: 'Learn more' },
+    secondaryCta: { href: 'handbook/', label: 'Read the Handbook' },
     previews: [
       { label: 'Install', code: 'npm install -g @accessibility-suite/evidence-engine' },
       { label: 'Scan', code: 'a11y-engine scan ./html --out ./results' },
